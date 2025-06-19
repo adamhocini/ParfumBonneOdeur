@@ -5,9 +5,10 @@ import { useCart } from '../context/CartContext';
 interface CartModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onCheckout: () => void;
 }
 
-const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
+const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose, onCheckout }) => {
   const { items, updateQuantity, removeFromCart, getTotalPrice, clearCart } = useCart();
 
   if (!isOpen) return null;
@@ -87,7 +88,10 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose }) => {
               </div>
               
               <div className="space-y-2">
-                <button className="w-full bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition-colors font-medium">
+                <button
+                  onClick={onCheckout}
+                  className="w-full bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition-colors font-medium"
+                >
                   Commander
                 </button>
                 <button
