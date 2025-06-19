@@ -9,6 +9,7 @@ import Shop from './pages/Shop';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
+import Checkout from './pages/Checkout';
 import { Product } from './types';
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
         return <Contact />;
       case 'blog':
         return <Blog />;
+      case 'checkout':
+        return <Checkout />;
       default:
         return <Home onProductClick={handleProductClick} onPageChange={setCurrentPage} />;
     }
@@ -52,9 +55,13 @@ function App() {
         
         <Footer />
         
-        <CartModal 
+        <CartModal
           isOpen={isCartOpen}
           onClose={() => setIsCartOpen(false)}
+          onCheckout={() => {
+            setIsCartOpen(false);
+            setCurrentPage('checkout');
+          }}
         />
         
         <ProductModal
