@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Filter, Grid, List } from 'lucide-react';
-import { products } from '../data/products';
+import { useProducts } from '../context/ProductContext';
 import ProductCard from '../components/ProductCard';
 import { Product } from '../types';
 
@@ -9,13 +9,14 @@ interface ShopProps {
 }
 
 const Shop: React.FC<ShopProps> = ({ onProductClick }) => {
+  const { products } = useProducts();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
   const [showFilters, setShowFilters] = useState(false);
 
   const categories = ['all', 'Floral', 'Boisé', 'Terreux', 'Aromatique'];
 
-  const filteredProducts = products.filter(product => 
+  const filteredProducts = products.filter(product =>
     selectedCategory === 'all' || product.category === selectedCategory
   );
 
