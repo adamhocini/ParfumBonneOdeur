@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Leaf, Award, Heart, ShoppingBag } from 'lucide-react';
-import { products } from '../data/products';
+import { useProducts } from '../context/ProductContext';
 import { testimonials } from '../data/testimonials';
 import ProductCard from '../components/ProductCard';
 import { Product } from '../types';
@@ -11,6 +11,7 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ onProductClick, onPageChange }) => {
+  const { products } = useProducts();
   const bestsellers = products.filter(p => p.bestseller);
 
   return (
