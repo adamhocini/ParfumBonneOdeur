@@ -90,13 +90,13 @@ const CartModal: React.FC<CartModalProps> = ({ isOpen, onClose, onCheckout }) =>
               <div className="space-y-2">
                 <button
                   onClick={onCheckout}
-                  className="w-full bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition-colors font-medium"
+                  className="btn-primary w-full"
                 >
                   Commander
                 </button>
                 <button
                   onClick={clearCart}
-                  className="w-full bg-stone-100 text-stone-600 py-2 rounded-lg hover:bg-stone-200 transition-colors text-sm"
+                  className="w-full bg-sand text-dark py-2 rounded-[12px] hover:shadow-md transition-colors text-sm"
                 >
                   Vider le panier
                 </button>

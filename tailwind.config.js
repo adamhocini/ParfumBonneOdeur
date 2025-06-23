@@ -8,6 +8,12 @@ export default {
         'serif': ['Playfair Display', 'serif'],
       },
       colors: {
+        ivory: '#F9F6F1',
+        dark: '#1A1A1A',
+        taupe: '#5F5E5D',
+        sage: '#D4E4D0',
+        sand: '#EADDC8',
+        rosegold: '#CBB2A3',
         stone: {
           50: '#fafaf9',
           100: '#f5f5f4',

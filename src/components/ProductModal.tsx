@@ -118,7 +118,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onClose })
                   
                   <button
                     onClick={handleAddToCart}
-                    className="w-full bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition-colors font-medium flex items-center justify-center space-x-2"
+                    className="btn-primary w-full flex items-center justify-center space-x-2"
                   >
                     <ShoppingCart className="w-5 h-5" />
                     <span>Ajouter au panier</span>

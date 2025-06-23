@@ -35,16 +35,16 @@ const Home: React.FC<HomeProps> = ({ onProductClick, onPageChange }) => {
             à partir d'ingrédients naturels d'exception.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
+            <button
               onClick={() => onPageChange('shop')}
-              className="bg-emerald-600 text-white px-8 py-4 rounded-lg hover:bg-emerald-700 transition-colors font-medium flex items-center justify-center space-x-2"
+              className="btn-primary flex items-center justify-center space-x-2"
             >
               <ShoppingBag className="w-5 h-5" />
               <span>Découvrir la boutique</span>
             </button>
-            <button 
+            <button
               onClick={() => onPageChange('about')}
-              className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white/20 transition-colors font-medium border border-white/20"
+              className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-[12px] hover:bg-white/20 transition-colors font-medium border border-white/20"
             >
               Notre histoire
             </button>
@@ -171,9 +171,9 @@ const Home: React.FC<HomeProps> = ({ onProductClick, onPageChange }) => {
           <p className="text-xl text-white/90 mb-8">
             Laissez-vous guider par nos experts pour trouver le parfum qui vous ressemble.
           </p>
-          <button 
+          <button
             onClick={() => onPageChange('contact')}
-            className="bg-emerald-600 text-white px-8 py-4 rounded-lg hover:bg-emerald-700 transition-colors font-medium"
+            className="btn-primary"
           >
             Nous contacter
           </button>
