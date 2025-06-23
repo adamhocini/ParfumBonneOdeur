@@ -21,7 +21,7 @@ const Home: React.FC<HomeProps> = ({ onProductClick, onPageChange }) => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/6621371/pexels-photo-6621371.jpeg?auto=compress&cs=tinysrgb&w=1600')`
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80')`
           }}
         />
         
@@ -161,7 +161,7 @@ const Home: React.FC<HomeProps> = ({ onProductClick, onPageChange }) => {
       <section 
         className="py-20 relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/6621374/pexels-photo-6621374.jpeg?auto=compress&cs=tinysrgb&w=1600')`
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1513001900722-370f803f4986?auto=format&fit=crop&w=1600&q=80')`
         }}
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
