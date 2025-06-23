@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ivory text-dark font-sans leading-relaxed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply rounded-[12px] bg-sage text-dark px-6 py-3 shadow-sm transition-all hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply rounded-[12px] bg-sand text-dark px-6 py-3 shadow-sm transition-all hover:shadow-md;
+  }
+}

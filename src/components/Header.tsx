@@ -21,14 +21,14 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange, onCartOpen }
   ];
 
   return (
-    <header className="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-stone-200">
+    <header className="bg-ivory/95 backdrop-blur-sm sticky top-0 z-50 border-b border-rosegold">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <button 
+            <button
               onClick={() => onPageChange('home')}
-              className="text-2xl font-bold text-stone-800 hover:text-stone-600 transition-colors"
+              className="text-2xl font-bold text-dark hover:text-sage transition-colors"
             >
               Essence Naturelle
             </button>
@@ -41,9 +41,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange, onCartOpen }
                 key={item.id}
                 onClick={() => onPageChange(item.id)}
                 className={`text-sm font-medium transition-colors ${
-                  currentPage === item.id 
-                    ? 'text-emerald-600 border-b-2 border-emerald-600' 
-                    : 'text-stone-600 hover:text-stone-900'
+                  currentPage === item.id
+                    ? 'text-dark border-b-2 border-sage'
+                    : 'text-taupe hover:text-dark'
                 }`}
               >
                 {item.name}
@@ -53,19 +53,19 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange, onCartOpen }
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
-            <button className="text-stone-600 hover:text-stone-900 transition-colors">
+            <button className="text-taupe hover:text-dark transition-colors">
               <Search className="w-5 h-5" />
             </button>
-            <button className="text-stone-600 hover:text-stone-900 transition-colors">
+            <button className="text-taupe hover:text-dark transition-colors">
               <User className="w-5 h-5" />
             </button>
-            <button 
+            <button
               onClick={onCartOpen}
-              className="relative text-stone-600 hover:text-stone-900 transition-colors"
+              className="relative text-taupe hover:text-dark transition-colors"
             >
               <ShoppingBag className="w-5 h-5" />
               {getItemCount() > 0 && (
-                <span className="absolute -top-2 -right-2 bg-emerald-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 bg-sage text-dark text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {getItemCount()}
                 </span>
               )}
@@ -74,7 +74,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange, onCartOpen }
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-stone-600 hover:text-stone-900 transition-colors"
+              className="md:hidden text-taupe hover:text-dark transition-colors"
             >
               {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -84,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange, onCartOpen }
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-stone-200">
+        <div className="md:hidden bg-ivory border-t border-rosegold">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navigation.map((item) => (
               <button
@@ -94,9 +94,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange, onCartOpen }
                   setIsMenuOpen(false);
                 }}
                 className={`block w-full text-left px-3 py-2 text-base font-medium transition-colors ${
-                  currentPage === item.id 
-                    ? 'text-emerald-600 bg-emerald-50' 
-                    : 'text-stone-600 hover:text-stone-900 hover:bg-stone-50'
+                  currentPage === item.id
+                    ? 'text-dark bg-sage'
+                    : 'text-taupe hover:text-dark hover:bg-sand'
                 }`}
               >
                 {item.name}
