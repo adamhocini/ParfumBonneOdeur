@@ -1,7 +1,8 @@
 import React from 'react';
 import { Product } from '../types';
 import { useCart } from '../context/CartContext';
-import { ShoppingCart, Star } from 'lucide-react';
+import { ShoppingCart, Star, Heart } from 'lucide-react';
+import { useUser } from '../context/UserContext';
 
 interface ProductCardProps {
   product: Product;
@@ -10,6 +11,16 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onProductClick }) => {
   const { addToCart } = useCart();
+  const { user, toggleFavorite, isFavorite } = useUser();
+
+  const handleToggleFavorite = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!user) {
+      alert('Veuillez vous connecter');
+      return;
+    }
+    toggleFavorite(product.id);
+  };
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -27,6 +38,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onProductClick }) =>
           alt={product.name}
           className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
         />
+        <button
+          onClick={handleToggleFavorite}
+          className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full hover:bg-white"
+        >
+          <Heart
+            className={`w-4 h-4 ${isFavorite(product.id) ? 'fill-red-500 text-red-500' : 'text-stone-600'}`}
+          />
+        </button>
         {product.bestseller && (
           <div className="absolute top-3 left-3 bg-emerald-500 text-white px-2 py-1 rounded-full text-xs font-medium">
             Best-seller

@@ -12,6 +12,9 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Checkout from './pages/Checkout';
 import Admin from './pages/Admin';
+import Login from './pages/Login';
+import Favorites from './pages/Favorites';
+import { UserProvider } from './context/UserContext';
 import { Product } from './types';
 
 function App() {
@@ -49,15 +52,20 @@ function App() {
         return <Checkout />;
       case 'admin':
         return <Admin />;
+      case 'login':
+        return <Login />;
+      case 'favorites':
+        return <Favorites onProductClick={handleProductClick} />;
       default:
         return <Home onProductClick={handleProductClick} onPageChange={setCurrentPage} />;
     }
   };
 
   return (
-    <ProductProvider>
-      <CartProvider>
-        <div className="min-h-screen bg-white">
+    <UserProvider>
+      <ProductProvider>
+        <CartProvider>
+          <div className="min-h-screen bg-white">
           <Header
           currentPage={currentPage}
           onPageChange={setCurrentPage}
@@ -84,9 +92,10 @@ function App() {
             isOpen={!!selectedProduct}
             onClose={() => setSelectedProduct(null)}
           />
-        </div>
-      </CartProvider>
-    </ProductProvider>
+          </div>
+        </CartProvider>
+      </ProductProvider>
+    </UserProvider>
   );
 }
 

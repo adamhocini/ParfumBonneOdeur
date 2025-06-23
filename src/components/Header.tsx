@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Menu, X, Search, User } from 'lucide-react';
+import { ShoppingBag, Menu, X, Search, User, Heart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { useUser } from '../context/UserContext';
 
 interface HeaderProps {
   currentPage: string;
@@ -11,13 +12,15 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange, onCartOpen }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { getItemCount } = useCart();
+  const { user, logout } = useUser();
 
   const navigation = [
     { name: 'Accueil', id: 'home' },
     { name: 'Boutique', id: 'shop' },
     { name: 'À Propos', id: 'about' },
     { name: 'Contact', id: 'contact' },
-    { name: 'Blog', id: 'blog' }
+    { name: 'Blog', id: 'blog' },
+    ...(user ? [{ name: 'Favoris', id: 'favorites' }] : [])
   ];
 
   return (
@@ -56,7 +59,18 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange, onCartOpen }
             <button className="text-taupe hover:text-dark transition-colors">
               <Search className="w-5 h-5" />
             </button>
-            <button className="text-taupe hover:text-dark transition-colors">
+            {user && (
+              <button
+                onClick={() => onPageChange('favorites')}
+                className="text-taupe hover:text-dark transition-colors"
+              >
+                <Heart className="w-5 h-5" />
+              </button>
+            )}
+            <button
+              onClick={() => (user ? logout() : onPageChange('login'))}
+              className="text-taupe hover:text-dark transition-colors"
+            >
               <User className="w-5 h-5" />
             </button>
             <button
