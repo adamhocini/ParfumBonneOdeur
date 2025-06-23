@@ -9,7 +9,7 @@ const Blog: React.FC = () => {
       <section 
         className="relative h-96 flex items-center justify-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.pexels.com/photos/6621371/pexels-photo-6621371.jpeg?auto=compress&cs=tinysrgb&w=1600')`
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1541648709927-4040f43b4a26?auto=format&fit=crop&w=1600&q=80')`
         }}
       >
         <div className="text-center max-w-4xl mx-auto px-4">

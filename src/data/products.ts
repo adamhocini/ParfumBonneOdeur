@@ -6,7 +6,7 @@ export const products: Product[] = [
     name: 'Essence de Forêt',
     price: 89,
     description: 'Un voyage olfactif au cœur de la forêt primordiale, où les notes de cèdre et de mousse se mêlent harmonieusement.',
-    image: 'https://images.pexels.com/photos/6621374/pexels-photo-6621374.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1555617117-08a3b1dc3e9d?auto=format&fit=crop&w=800&q=80',
     category: 'Boisé',
     notes: {
       top: ['Bergamote', 'Eucalyptus'],
@@ -22,7 +22,7 @@ export const products: Product[] = [
     name: 'Jardin Secret',
     price: 95,
     description: 'Une composition florale délicate qui évoque les jardins secrets au petit matin, fraîche et envoûtante.',
-    image: 'https://images.pexels.com/photos/6621045/pexels-photo-6621045.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1507247937707-2be2e0e1c87f?auto=format&fit=crop&w=800&q=80',
     category: 'Floral',
     notes: {
       top: ['Citron vert', 'Cassis'],
@@ -38,7 +38,7 @@ export const products: Product[] = [
     name: 'Terre Sacrée',
     price: 78,
     description: 'Un parfum puissant et terreux qui célèbre la beauté brute de la nature sauvage.',
-    image: 'https://images.pexels.com/photos/6621092/pexels-photo-6621092.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=80',
     category: 'Terreux',
     notes: {
       top: ['Galbanum', 'Poivre noir'],
@@ -53,7 +53,7 @@ export const products: Product[] = [
     name: 'Aube Dorée',
     price: 92,
     description: 'Une fragrance lumineuse qui capture la magie des premiers rayons du soleil sur les champs de lavande.',
-    image: 'https://images.pexels.com/photos/6621448/pexels-photo-6621448.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1535732750068-b2115e5e445a?auto=format&fit=crop&w=800&q=80',
     category: 'Aromatique',
     notes: {
       top: ['Lavande', 'Romarin'],

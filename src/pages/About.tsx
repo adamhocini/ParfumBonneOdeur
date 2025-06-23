@@ -8,7 +8,7 @@ const About: React.FC = () => {
       <section 
         className="relative h-96 flex items-center justify-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.pexels.com/photos/6621447/pexels-photo-6621447.jpeg?auto=compress&cs=tinysrgb&w=1600')`
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1516280440614-bb2265816434?auto=format&fit=crop&w=1600&q=80')`
         }}
       >
         <div className="text-center max-w-4xl mx-auto px-4">
@@ -47,7 +47,7 @@ const About: React.FC = () => {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/6621371/pexels-photo-6621371.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://images.unsplash.com/photo-1531648722891-07f1f8faad0d?auto=format&fit=crop&w=800&q=80"
                 alt="Atelier de parfumerie"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
@@ -170,7 +170,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center bg-white p-8 rounded-lg shadow-sm">
               <img
-                src="https://images.pexels.com/photos/6621092/pexels-photo-6621092.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://images.unsplash.com/photo-1556228724-4fe969e2423d?auto=format&fit=crop&w=400&q=80"
                 alt="Amélie Delacroix"
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
               />
@@ -184,7 +184,7 @@ const About: React.FC = () => {
             
             <div className="text-center bg-white p-8 rounded-lg shadow-sm">
               <img
-                src="https://images.pexels.com/photos/6621045/pexels-photo-6621045.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://images.unsplash.com/photo-1567415126090-eae7a38652ae?auto=format&fit=crop&w=400&q=80"
                 alt="Thomas Moreau"
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
               />
@@ -198,7 +198,7 @@ const About: React.FC = () => {
             
             <div className="text-center bg-white p-8 rounded-lg shadow-sm">
               <img
-                src="https://images.pexels.com/photos/6621448/pexels-photo-6621448.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=400&q=80"
                 alt="Sophie Dubois"
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
               />
